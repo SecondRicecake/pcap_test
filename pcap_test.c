@@ -59,7 +59,7 @@
 		printf("\n\n");
 		
 		/*check if IPv4 and TCP*/
-		if ((*(packet+23)!=0x6||*(packet+12)!=0x8&&*(packet+13)!=0x0)){
+		if ((*(packet+12)!=0x8&&*(packet+13)!=0x0||*(packet+23)!=0x6)){
 			printf("Could not find IPv4 and TCP.\n");
 			continue;
 		}
